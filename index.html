@@ -31,7 +31,6 @@
             overflow: hidden;
         }
 
-        /* MASSIVE SYSTEM GRID */
         .os-wrapper {
             display: grid;
             grid-template-columns: 450px 1fr 400px;
@@ -192,7 +191,7 @@
             <div class="orb-nexus">
                 <div class="orb-core" id="masterOrb"></div>
             </div>
-            <div style="text-align: center; font-size: 10px; opacity: 0.5;">ENGINE: GROQ_LLAMA3_8B</div>
+            <div style="text-align: center; font-size: 10px; opacity: 0.5;">ENGINE: LLAMA_3.1_INSTANT</div>
         </aside>
 
         <footer class="command-hud">
@@ -202,14 +201,10 @@
     </div>
 
     <script>
-        /* ============================================================
-           GROQ LPU INTEGRATION - MODIFIED FOR PRIYANSU
-           ============================================================ */
-
         const KERNEL_CONFIG = {
             KEY: "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", 
             ENDPOINT: "https://api.groq.com/openai/v1/chat/completions",
-            MODEL: "llama3-8b-8192"
+            MODEL: "llama-3.1-8b-instant" 
         };
 
         const logBox = document.getElementById('terminal');
@@ -275,7 +270,6 @@
             synth.speak(msg);
         }
 
-        // OPTIC SCANNER (REMAINED UNTOUCHED)
         const video = document.getElementById('vSource');
         const hands = new Hands({locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`});
         
